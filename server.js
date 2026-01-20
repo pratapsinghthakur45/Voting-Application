@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
 });
 
 //user routes
-app.use('/User',jwtAuth,userRoutes);
+app.use('/User',userRoutes);
 
 //
 const PORT = process.env.PORT || 3000;
