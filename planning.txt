@@ -27,7 +27,7 @@ routers
   /vote/:candidateID - POST - user give there selected candidate
 
 3. Vote Counts
-     /vote/counts: GET - get the list of candidate sorted byt there vote order
+     /vote/counts: GET - get the list of candidate sorted by there vote order
 
 4. Profile
    /profile : GET - user able to see there personal info

@@ -58,7 +58,7 @@ userSchema.pre('save', async function(next){
         person.password = hashedPassword;
         next();
     }catch(err){
-        return next(err);
+        return err;
     }
 });
 

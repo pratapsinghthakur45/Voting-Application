@@ -1,3 +1,4 @@
 #ignore the file and folder that no need to shift github
 node_modules/
 .env
+dummyData/
