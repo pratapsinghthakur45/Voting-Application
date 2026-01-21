@@ -31,12 +31,12 @@ routers
 
 4. Profile
    /profile : GET - user able to see there personal info
-   /profile/password - POST - user can change there password
+   /profile/password - PUT - user can change there password
 
 5. Admin management
     /candidates: POST - create a new candidate
-    /candidates: PUT - change detail of candidate
-    /candidate: DELETE - delete candidate from the list
+    /candidates/:id PUT - change detail of candidate
+    /candidate/:id DELETE - delete candidate from the list
 
 
 

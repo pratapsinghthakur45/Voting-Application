@@ -2,7 +2,9 @@ import express from 'express';
 import db from './db.js'
 import dotenv from 'dotenv';
 import userRoutes from "./routes/userRoutes.js";
+import candidateRoutes from "./routes/candidateRoutes.js";
 import jwtAuth from './middleware/jwtAuth.js';
+import Candidate from './models/candidate.js';
 
 dotenv.config();
 
@@ -18,6 +20,7 @@ app.get('/',(req,res)=>{
 
 //user routes
 app.use('/User',userRoutes);
+app.use('/candidate',candidateRoutes)
 
 //
 const PORT = process.env.PORT || 3000;

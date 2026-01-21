@@ -46,7 +46,7 @@ userSchema.pre('save', async function(next){
     const person = this;
 
     // Hash the password only if it has been modified (or is new)
-    if(!person.isModified('password')) return next();
+    if(!person.isModified('password')) return next;
     try{
         // hash password generation
         const salt = await bcrypt.genSalt(10);
@@ -58,7 +58,7 @@ userSchema.pre('save', async function(next){
         person.password = hashedPassword;
         next();
     }catch(err){
-        return err;
+        return next(err);
     }
 });
 

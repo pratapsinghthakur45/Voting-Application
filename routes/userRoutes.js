@@ -123,7 +123,7 @@ router.put('/profile/password',jwtAuth,async (req,res)=>{
           //find user id
           const user = await User.findById(userId);
 
-          //if user not exist or password is not match
+            //if user not exist or password is not match
             // If user does not exist or password does not match, return error
            if (!user || !(await user.comparePassword(currentPassword))) {
                return res.status(401).json({ error: 'Invalid current password' });
